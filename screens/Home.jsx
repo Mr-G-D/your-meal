@@ -1,15 +1,26 @@
-import { SafeAreaView, Platform, StatusBar } from "react-native";
+import { SafeAreaView, Platform, StatusBar, View } from "react-native";
 import React from "react";
 import HeaderTabs from "../components/HeaderTabs";
+import SearchBar from "../components/SearchBar";
 
 const Home = () => {
   return (
     <SafeAreaView
       style={{
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+        backgroundColor: "#eee",
+        flex: 1,
       }}
     >
-      <HeaderTabs />
+      <View
+        style={{
+          backgroundColor: "white",
+          padding: 15,
+        }}
+      >
+        <HeaderTabs />
+        <SearchBar />
+      </View>
     </SafeAreaView>
   );
 };
