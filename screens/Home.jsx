@@ -10,6 +10,7 @@ import HeaderTabs from "../components/HeaderTabs";
 import SearchBar from "../components/SearchBar";
 import Categories from "../components/Categories";
 import RestaurantItem from "../components/RestaurantItem";
+import { localRestaurants } from "../components/RestaurantItem";
 
 const Home = () => {
   return (
@@ -31,7 +32,7 @@ const Home = () => {
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Categories />
-        <RestaurantItem />
+        <RestaurantItem restaurants={localRestaurants} />
       </ScrollView>
     </SafeAreaView>
   );
